@@ -8,6 +8,12 @@ nav:
     - Task 3: 'lab1/3.md'
     - Task 4: 'lab1/4.md'
     - Task 5: 'lab1/5.md'
+  - 2 lab:
+      - Task: 'lab2/task.md'
+      - View: 'lab2/view.md'
+      - Model: 'lab2/model.md'
+      - Form: 'lab2/form.md'
+
 
 
 theme:
