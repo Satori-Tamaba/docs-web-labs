@@ -13,6 +13,10 @@ nav:
       - View: 'lab2/view.md'
       - Model: 'lab2/model.md'
       - Form: 'lab2/form.md'
+  - 3 lab:
+      - pw: 'lab3/pw3/pw.md'
+      - task2: 'lab3/task2.md'
+
 
 
 
