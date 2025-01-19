@@ -14,8 +14,9 @@ nav:
       - Model: 'lab2/model.md'
       - Form: 'lab2/form.md'
   - 3 lab:
-      - pw: 'lab3/pw3/pw.md'
-      - task2: 'lab3/task2.md'
+      - pw1: 'lab3/pw1.md'
+      - pw2: 'lab3/pw3/pw.md'
+      - task: 'lab3/task2.md'
 
 
 
