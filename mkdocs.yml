@@ -17,6 +17,12 @@ nav:
       - pw1: 'lab3/pw1.md'
       - pw2: 'lab3/pw3/pw.md'
       - task: 'lab3/task2.md'
+  - 4 lab:
+      - Organization: 'lab4/org.md'
+      - InsuranceCases: 'lab4/InsuranceCases.md'
+      - Employee: 'lab4/Employee.md'
+      - CollectiveContracts: 'lab4/CollectiveContracts.md'
+      - Agents: 'lab4/Agents.md'
 
 
 
