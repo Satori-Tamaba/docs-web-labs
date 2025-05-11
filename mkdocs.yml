@@ -23,7 +23,6 @@ nav:
       - Employee: 'lab4/Employee.md'
       - CollectiveContracts: 'lab4/CollectiveContracts.md'
       - Agents: 'lab4/Agents.md'
-  - sem 2 lab 1:
   - lab 2:
       - task1: 'docs/sem 2 lab2/task1.md'
       - task2: 'docs/sem 2 lab2/task2.md'
