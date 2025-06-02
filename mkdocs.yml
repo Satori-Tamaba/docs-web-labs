@@ -26,6 +26,9 @@ nav:
   - 2 lab sem 2:
       - task1: 'sem2lab2/task1.md'
       - task2: 'sem2lab2/task2.md'
+  - 3 Lab sem 2:
+      - Docker: 'Sem2Lab3/docker.md'
+      - Celery: 'Sem2Lab3/Celery.md'
 
 
 theme:
