@@ -1,0 +1,1328 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://Satori-Tamaba.github.io/ITMO_ICT_WebDevelopment_2024-2025/lab3/task2/">
+      
+      
+        <link rel="prev" href="../pw3/pw/">
+      
+      
+        <link rel="next" href="../../lab4/org/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.14">
+    
+    
+      
+        <title>task - web_development</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.342714a4.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#django-djangorestframework" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="web_development" class="md-header__button md-logo" aria-label="web_development" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            web_development
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              task
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="web_development" class="md-nav__button md-logo" aria-label="web_development" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    web_development
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    1 lab
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            1 lab
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lab1/1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Task 1
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lab1/2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Task 2
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lab1/3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Task 3
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lab1/4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Task 4
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lab1/5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Task 5
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    2 lab
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            2 lab
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lab2/task/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Task
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lab2/view/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    View
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lab2/model/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Model
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lab2/form/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Form
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    3 lab
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            3 lab
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pw1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    pw1
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pw3/pw/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    pw2
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    task
+    
+  </span>
+  
+
+      </a>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    4 lab
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            4 lab
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lab4/org/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Organization
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lab4/InsuranceCases/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    InsuranceCases
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lab4/Employee/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Employee
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lab4/CollectiveContracts/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    CollectiveContracts
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lab4/Agents/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Agents
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    2 lab sem 2
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            2 lab sem 2
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sem2lab2/task1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    task1
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sem2lab2/task2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    task2
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    3 Lab sem 2
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            3 Lab sem 2
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Sem2Lab3/docker/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Docker
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Sem2Lab3/Celery/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Celery
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="django-djangorestframework">Реализация серверной части приложения средствами django и djangorestframework в соответствии с заданием из текста работы.</h1>
+<p>Описание моего варианта
+Создать программную систему, предназначенную для управления договорами
+страхования с физическими лицами и юридическими организациями.
+Страховая организация заключает договоры. Для организации оформляется
+коллективный договор, в котором перечислены страхуемые сотрудники: ФИО, возраст,
+категория риска (первая, вторая, высшая и т.п.). О предприятии хранится следующая
+информация: код, полное наименование, краткое наименование, адрес, банковские
+реквизиты (номер банка), специализация предприятия (медицинское учреждение,
+автотранспортное предприятие, учебное заведение и т.п.). В заключаемом коллективном
+договоре указывается дата заключения, срок договора (начало и конец действия договора),
+сумма выплат по каждой категории сотрудников, выплаты по страховым случаям.
+Выплаты зависят от категории сотрудника. Необходимо также хранить информацию о
+страховом агенте, заключившем договор (ФИО, паспортные данные, контактные данные).
+Каждый агент может заключить много договоров, в каждом договоре может быть
+оформлено несколько сотрудников. С физическим лицом заключается индивидуальный
+договор. Каждый конкретный договор может быть заключен только одним агентом.
+При возникновении страхового случая необходима информация о его дате,
+причине, решении о выплате страховой суммы и размере выплаты.
+Директор компании должен иметь возможность принять и уволить на работу
+страхового агента. Поэтому должна сохраняться информация о заключенных с ними
+трудовых договорах.
+Перечень возможных запросов:</p>
+<ol>
+<li>Для заданной организации вывести список других организаций,
+застрахованных теми же агентами, что и заданная, для действующих
+договоров.</li>
+<li>Для каждого агента вывести количество заключенных им договоров каждого
+типа за определенный период времени.</li>
+<li>Для заданной персоны вывести список застрахованных сотрудников в одном
+коллективном договоре для действующих коллективных договоров.</li>
+<li>Вывести общую сумму выплат по каждому типу договоров при возникших
+страховых случаях за заданный период времени.</li>
+<li>Для каждого юридического лица вывести реквизиты договора и общую сумму
+выплат по всем категориям сотрудников.</li>
+</ol>
+<p>Стек реализации</p>
+<pre><code>Язык: Python
+фреймворк : Django, DRF
+</code></pre>
+<h1 id="_1">Документация к сериализаторам</h1>
+<h2 id="insuranceagentserializer">InsuranceAgentSerializer</h2>
+<p>Этот класс используется для сериализации модели <code>InsuranceAgent</code>. Он преобразует данные модели в формат JSON и обратно.</p>
+<h3 id="_2">Поля:</h3>
+<ul>
+<li><code>model</code>: указывает на модель <code>InsuranceAgent</code>.</li>
+<li><code>fields</code>: включает все поля модели.</li>
+</ul>
+<h2 id="organizationserializer">OrganizationSerializer</h2>
+<p>Сериализатор для модели <code>Organization</code>. Используется для преобразования данных модели в формат JSON и обратно.</p>
+<h3 id="_3">Поля:</h3>
+<ul>
+<li><code>model</code>: модель <code>Organization</code>.</li>
+<li><code>fields</code>: включает все поля модели.</li>
+</ul>
+<h2 id="employeeserializer">EmployeeSerializer</h2>
+<p>Этот сериализатор отвечает за преобразование данных модели <code>Employee</code> в формат JSON и обратно.</p>
+<h3 id="_4">Поля:</h3>
+<ul>
+<li><code>model</code>: модель <code>Employee</code>.</li>
+<li><code>fields</code>: включает все поля модели.</li>
+</ul>
+<h2 id="collectivecontractserializer">CollectiveContractSerializer</h2>
+<p>Сериализатор для модели <code>CollectiveContract</code>. Он используется для преобразования всех данных модели.</p>
+<h3 id="_5">Поля:</h3>
+<ul>
+<li><code>model</code>: модель <code>CollectiveContract</code>.</li>
+<li><code>fields</code>: включает все поля модели.</li>
+</ul>
+<h2 id="insurancecaseserializer">InsuranceCaseSerializer</h2>
+<p>Сериализатор для работы с моделью <code>InsuranceCase</code>. Предназначен для преобразования данных модели.</p>
+<h3 id="_6">Поля:</h3>
+<ul>
+<li><code>model</code>: модель <code>InsuranceCase</code>.</li>
+<li><code>fields</code>: включает все поля модели.</li>
+</ul>
+<h2 id="employmentcontractserializer">EmploymentContractSerializer</h2>
+<p>Сериализатор для модели <code>EmploymentContract</code>. Этот класс включает данные об агенте страхования с использованием вложенного сериализатора.</p>
+<h3 id="_7">Поля:</h3>
+<ul>
+<li><code>model</code>: модель <code>EmploymentContract</code>.</li>
+<li><code>fields</code>: включает все поля модели.</li>
+<li><code>insurance_agent</code>: сериализатор для агента страхования, только для чтения.</li>
+<li></li>
+</ul>
+<h3 id="viewspy">Документация для <code>views.py</code></h3>
+<h4 id="insuranceagentviewset">Класс: <code>InsuranceAgentViewSet</code></h4>
+<p>Обрабатывает операции CRUD и бизнес-логику для объектов <code>InsuranceAgent</code>.</p>
+<h5 id="create">Функция: <code>create</code></h5>
+<p>Создаёт или получает страхового агента на основе паспортных данных и генерирует новый трудовой договор для агента.</p>
+<pre><code class="language-python">    def create(self, request, *args, **kwargs):
+        passport_details = request.data.get('passport_details')
+
+        agent, created = InsuranceAgent.objects.get_or_create(passport_details=passport_details, defaults=request.data)
+
+        if created:
+            message = 'Создан новый агент.'
+        else:
+            message = 'Агент уже существует.'
+
+        start_date = now().date()
+        end_date = start_date + timedelta(days=365)
+        new_contract = EmploymentContract.objects.create(
+            insurance_agent=agent,
+            start_date=start_date,
+            end_date=end_date
+        )
+
+        contract_serializer = EmploymentContractSerializer(new_contract)
+
+        return Response({
+            'message': f'{message} Создан новый договор.',
+            'agent': self.get_serializer(agent).data,
+            'contract': contract_serializer.data
+        }, status=status.HTTP_201_CREATED if created else status.HTTP_200_OK)
+</code></pre>
+<hr />
+<h4 id="organizationviewset">Класс: <code>OrganizationViewSet</code></h4>
+<p>Обрабатывает операции CRUD и связанные данные для объектов <code>Organization</code>.</p>
+<h5 id="related_organizations">Функция: <code>related_organizations</code></h5>
+<p>Получает организации, связанные с текущей на основе общих активных договоров.</p>
+<pre><code class="language-python">    @action(detail=True, methods=['get'])
+    def related_organizations(self, request, pk=None):
+        organization = self.get_object()
+        current_date = request.query_params.get('current_date')
+
+        if current_date is None:
+            current_date = now().date()
+
+        agent_ids = organization.collectivecontract_set.filter(
+            end_date__gte=current_date
+        ).values_list('insurance_agent_id', flat=True)
+
+        related_orgs = Organization.objects.filter(
+            collectivecontract__insurance_agent_id__in=agent_ids,
+            collectivecontract__end_date__gte=current_date
+        ).distinct().exclude(id=organization.id)
+
+        serializer = self.get_serializer(related_orgs, many=True)
+        return Response(serializer.data)
+</code></pre>
+<h5 id="contract_details_and_payouts">Функция: <code>contract_details_and_payouts</code></h5>
+<p>Получает данные о договорах и их общих выплатах для заданной организации.</p>
+<pre><code class="language-python">    @action(detail=True, methods=['get'])
+    def contract_details_and_payouts(self, request, pk=None):
+        organization = Organization.objects.get(pk=pk)
+        contracts = CollectiveContract.objects.filter(organization=organization)
+        serialized_contracts = CollectiveContractSerializer(contracts, many=True).data
+
+        for contract_data, contract in zip(serialized_contracts, contracts):
+            total_payout = contract.insurancecase_set.aggregate(total=Sum('payout_amount'))['total'] or 0
+            contract_data['total_payout'] = total_payout
+
+        return Response(serialized_contracts)
+</code></pre>
+<hr />
+<h4 id="collectivecontractviewset">Класс: <code>CollectiveContractViewSet</code></h4>
+<p>Управляет объектами <code>CollectiveContract</code> и связанными данными.</p>
+<h5 id="agent_contracts_count">Функция: <code>agent_contracts_count</code></h5>
+<p>Получает количество договоров (коллективных и индивидуальных) для агентов в указанном диапазоне дат.</p>
+<pre><code class="language-python">    @swagger_auto_schema(
+        manual_parameters=[
+            openapi.Parameter(
+                'start_date',
+                openapi.IN_QUERY,
+                description=&quot;Дата начала периода в формате YYYY-MM-DD&quot;,
+                type=openapi.TYPE_STRING,
+                format=openapi.FORMAT_DATE
+            ),
+            openapi.Parameter(
+                'end_date',
+                openapi.IN_QUERY,
+                description=&quot;Дата окончания периода в формате YYYY-MM-DD&quot;,
+                type=openapi.TYPE_STRING,
+                format=openapi.FORMAT_DATE
+            )
+        ]
+    )
+    @action(detail=False, methods=['get'])
+    def agent_contracts_count(self, request):
+        start_date = request.query_params.get('start_date')
+        end_date = request.query_params.get('end_date')
+
+        if not start_date:
+            start_date = '1900-01-01'
+        if not end_date:
+            end_date = '2500-01-01'
+
+        contracts = CollectiveContract.objects.filter(start_date__gte=start_date, end_date__lte=end_date)
+        result = contracts.values('insurance_agent__full_name').annotate(
+            collective_count=Count('id', filter=Q(organization__isnull=False)),
+            individual_count=Count('id', filter=Q(organization__isnull=True))
+        )
+        return Response(result)
+</code></pre>
+<h5 id="insured_employees">Функция: <code>insured_employees</code></h5>
+<p>Получает всех сотрудников, застрахованных по конкретному коллективному договору.</p>
+<pre><code class="language-python">    @action(detail=True, methods=['get'])
+    def insured_employees(self, request, pk=None):
+        contract = self.get_object()
+        employees = contract.employees.all()
+        serializer = EmployeeSerializer(employees, many=True)
+        return Response(serializer.data)
+</code></pre>
+<hr />
+<h4 id="employeecaseviewset">Класс: <code>EmployeeCaseViewSet</code></h4>
+<p>Обрабатывает операции CRUD для объектов <code>Employee</code>.</p>
+<hr />
+<h4 id="insurancecaseviewset">Класс: <code>InsuranceCaseViewSet</code></h4>
+<p>Управляет объектами <code>InsuranceCase</code> и их выплатами.</p>
+<h5 id="total_payouts">Функция: <code>total_payouts</code></h5>
+<p>Получает общую сумму выплат, сгруппированных по типу договора, в указанном диапазоне дат.</p>
+<pre><code class="language-python">    @action(detail=False, methods=['get'])
+    def total_payouts(self, request):
+        start_date = request.query_params.get('start_date')
+        end_date = request.query_params.get('end_date')
+
+        if not start_date:
+            start_date = '1900-01-01'
+        if not end_date:
+            end_date = '2100-01-01'
+
+        cases = InsuranceCase.objects.filter(date__gte=start_date, date__lte=end_date)
+        result = cases.values('contract__type').annotate(total_payout=Sum('payout_amount'))
+
+        return Response(result)
+</code></pre>
+<h2 id="djoser">Djoser</h2>
+<p>метод POST
+создания пользователя 
+http://127.0.0.1:8000/auth/users/</p>
+<p>Метод POST
+Получение токена
+http://127.0.0.1:8000/auth/token/login</p>
+<p>Метов GET
+Получение пользователя по токену
+http://127.0.0.1:8000/auth/users/me/</p>
+<h2 id="_8">Аналитические запросы</h2>
+<p>1 Для заданной организации вывести список других организаций,
+застрахованных теми же агентами, что и заданная, для действующих
+договоров.</p>
+<p>GET /organizations/{id}/related_organizations/
+<img alt="img.png" src="../img.png" />
+2 Для каждого агента вывести количество заключенных им договоров каждого
+типа за определенный период времени.</p>
+<p>GET /collective-contracts/agent_contracts_count/
+<img alt="img_1.png" src="../img_1.png" />
+<img alt="img_2.png" src="../img_2.png" /></p>
+<p>3 Для заданной персоны вывести список застрахованных сотрудников в одном
+коллективном договоре для действующих коллективных договоров.
+GET /collective-contracts/{id}/insured_employees/
+<img alt="img_3.png" src="../img_3.png" />
+4 Вывести общую сумму выплат по каждому типу договоров при возникших
+страховых случаях за заданный период времени.</p>
+<p>GET /insurance-cases/total_payouts/
+<img alt="img_4.png" src="../img_4.png" /></p>
+<p>5 Для каждого юридического лица вывести реквизиты договора и общую сумму
+выплат по всем категориям сотрудников.
+GET /organizations/{id}/contract_details_and_payouts/</p>
+<p><img alt="img_5.png" src="../img_5.png" /></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.13a4f30d.min.js"></script>
+      
+    
+  </body>
+</html>
