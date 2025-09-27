@@ -30,6 +30,16 @@ nav:
       - Docker: 'Sem2Lab3/docker.md'
       - Celery: 'Sem2Lab3/Celery.md'
 
+
+theme:
+  name: material
+  custom_dir: overrides
+
+markdown_extensions:
+  - admonition
+  - toc
+
+
 extra_head:
   - |
     <!-- Yandex.Metrika counter -->
@@ -45,10 +55,3 @@ extra_head:
     </script>
     <noscript><div><img src="https://mc.yandex.ru/watch/104303260" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
     <!-- /Yandex.Metrika counter -->
-
-theme:
-  name: material
-
-markdown_extensions:
-  - admonition
-  - toc
