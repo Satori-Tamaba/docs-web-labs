@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="ru">
+<head>c
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Тест Яндекс.Метрики — кнопки</title>
+
+  <!-- Yandex.Metrika counter -->
+  <script type="text/javascript">
+    (function(m,e,t,r,i,k,a){
+      m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+      m[i].l=1*new Date();
+      for (var j = 0; j < document.scripts.length; j++) { if (document.scripts[j].src === r) { return; } }
+      k=e.createElement(t), a=e.getElementsByTagName(t)[0], k.async=1, k.src=r, a.parentNode.insertBefore(k,a)
+    })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=104303260','ym');
+
+    // Инициализация (оставил твои опции)
+    ym(104303260, 'init', {
+      ssr: true,
+      webvisor: true,
+      clickmap: true,
+      ecommerce: "dataLayer",
+      accurateTrackBounce: true,
+      trackLinks: true
+    });
+  </script>
+  <!-- /Yandex.Metrika counter -->
+</head>
+<body style="font-family: Arial, sans-serif; padding: 24px;">
+
+  <h1>Тест Яндекс.Метрики</h1>
+  <p>Ниже — пара кнопок. Каждое нажатие отправляет цель в Метрику (пример).</p>
+
+  <button id="btn1" style="padding:12px 18px; margin-right:10px;">Кнопка 1 — просто клик</button>
+  <button id="btn2" style="padding:12px 18px;">Кнопка 2 — цель "purchase"</button>
+
+  <p id="log" style="margin-top:16px;color:#333;">Статус: ожидание действий...</p>
+
+  <script>
+    // Отправляет цель в Яндекс.Метрику. Если ym ещё не загружен, вызовы будут поставлены в очередь.
+    function sendGoal(goalName, params) {
+      try {
+        if (window.ym) {
+          ym(104303260, 'reachGoal', goalName, params);
+          console.log('ym called:', goalName, params);
+          document.getElementById('log').textContent = 'Отправлена цель: ' + goalName;
+        } else {
+          console.log('ym not ready yet, queuing:', goalName);
+          // Даже если ym не определён — вызов ym(...) до загрузки скрипта будет поставлен в очередь,
+          // потому что инициализация ym в snippet уже настроена. Но на всякий случай сообщаем.
+          document.getElementById('log').textContent = 'ym ещё не загрузился — цель поставлена в очередь';
+        }
+      } catch (e) {
+        console.error(e);
+        document.getElementById('log').textContent = 'Ошибка при отправке цели: ' + e.message;
+      }
+    }
+
+    document.getElementById('btn1').addEventListener('click', function(){
+      sendGoal('button_click_1');
+    });
+
+    document.getElementById('btn2').addEventListener('click', function(){
+      // Пример отправки параметров — можно использовать для ecommerce/событий.
+      sendGoal('purchase_test', { value: 123, currency: 'RUB' });
+    });
+  </script>
+
+  <!-- noscript fallback: изображение -->
+  <noscript>
+    <div><img src="https://mc.yandex.ru/watch/104303260" style="position:absolute; left:-9999px;" alt="Yandex.Metrika" /></div>
+  </noscript>
+
+</body>
+</html>
